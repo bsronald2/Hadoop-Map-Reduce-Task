@@ -1,0 +1,6 @@
+Movie 0 -> movie acting plot time script
+Product 1 -> great phone works product well
+Product 0 -> phone dont battery product after
+Movie 1 -> movie great well characters wonderful
+Restaurant 0 -> food place back service here
+Restaurant 1 -> great food place service here

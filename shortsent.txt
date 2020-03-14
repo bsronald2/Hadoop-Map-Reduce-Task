@@ -1,0 +1,20 @@
+Restaurant	I swung in to give them a try but was deeply disappointed.	0
+Restaurant	I had a good experience.	1
+Movie	Some applause should be given to the "prelude" however.  	1
+Product	A must study for anyone interested in the "worst sins" of industrial design.	0
+Restaurant	The inside is really quite nice and very clean.	1
+Restaurant	They will customize your order any way you'd like, my usual is Eggplant with Green Bean stir fry, love it!	1
+Movie	I wish I could enter negative values, admins? enter enter 	0
+Restaurant	Best fish I've ever had in my life!	1
+Product	It is simple to use and I like it.	1
+Product	Restored my phone to like new performance.	1
+Movie	Not easy to watch.  	0
+Movie	The script is bad, very bad, it contains both cheesiness and unethical joke that you normally see in rated R or NC-17 movie.  	0
+Restaurant	I will not be eating there again.	0
+Restaurant	What I really like there is the crepe station.	1
+Restaurant	I paid the bill but did not tip because I felt the server did a terrible job.	0
+Restaurant	Service was very prompt.	1
+Movie	However Paul Schrader has indeed made a film "about" Mishima that is both superb & complex.  	1
+Movie	Both Rickman and Stowe play their roles to the hilt in this tale of a childrens' book writer who-- maybe?-- has written a subversive tract.  	1
+Restaurant	My brother in law who works at the mall ate here same day, and guess what he was sick all night too.	0
+Restaurant	For sushi, this is the place to go.	1
