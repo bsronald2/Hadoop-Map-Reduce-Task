@@ -49,12 +49,11 @@ public class SentimentWords {
 				if (this.exclude.contains(word)) {
 					continue;
 				}
-				context.write(new Text(parser.getCompositeKey()), new Text(word));
+				context.write(new Text(parser.getCompositeKey()), new Text(word + ":1"));
 			}
+
 		}
 
-		// 	You will want to load the contents of the exclusion file here. The
-		// 	relevant file name can be extracted from the cache array.
 
 		/** This method set the global attributes and read the cache file.
 		 *
@@ -69,7 +68,6 @@ public class SentimentWords {
 				for (URI file : cacheFiles) {
 					readFile(file, this.exclude);
 				}
-				System.out.println("----> Exclude: " +this.exclude);
 			} catch (Exception e) {
 				System.err.println("Problems setting up mapper: " + e);
 			}
@@ -117,12 +115,14 @@ public class SentimentWords {
 		 */
 		public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 			HashMap<String, Integer> map = new HashMap<String, Integer>();
-			for (Text word : values) {
-				String wordAsString = word.toString();
+			for (Text value : values) {
+				String[] val = value.toString().split(":");
+				String wordAsString = new String(val[0]); // Save word key
+				int countValue = Integer.parseInt(val[1]); // Save count value equals to 1
 				if (map.containsKey(wordAsString)) {
-					map.put(wordAsString, map.get(wordAsString) + 1);
+					map.put(wordAsString, map.get(wordAsString) + countValue);
 				} else {
-					map.put(wordAsString, 1);
+					map.put(wordAsString, countValue);
 				}
 			}
 			for (Map.Entry<String, Integer> entry : map.entrySet()) {
@@ -182,7 +182,6 @@ public class SentimentWords {
 					.sorted(Map.Entry.<Text, Integer>comparingByValue().reversed())
 					.limit(n) // limited the out to N values
 					.forEachOrdered(x -> mapSorted.put(x.getKey().toString(), x.getValue())); // Save the value inside a new Map
-			System.out.println("Map sorted:" + mapSorted);
 
 			return StringUtils.join(mapSorted.keySet(), " "); // return keys appended as unique String
 		}
