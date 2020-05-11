@@ -19,12 +19,6 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 
-
-/**
- * Student ID: 2833077
- *
- */
-
 public class SentimentWords {
 
 	// The mapper class
